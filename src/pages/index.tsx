@@ -74,49 +74,46 @@ export default function Landing () {
                     </Box>
                 </Container>
             </Box>
-            <main>
-                <Box
-                    component="section"
-                    p={8}
-                    bgcolor="white"
-                >
-                    <Container>
-                        <Box>
-                            <Box width="40%">
-                                <Typography
-                                    variant="h4"
-                                    paddingBottom={2}
-                                >
-                            A fully integrated suite of payments products
-                                </Typography>
-                            </Box>
-                            <Box
-                                display="flex"
-                                width="100%"
+            <Box
+                component="main"
+                p={8}
+                bgcolor="white"
+            >
+                <Container>
+                    <Box>
+                        <Box width="40%">
+                            <Typography
+                                variant="h4"
+                                paddingBottom={2}
                             >
-                                <Box paddingRight={4}>
-                                    <Typography>
+                            A fully integrated suite of payments products
+                            </Typography>
+                        </Box>
+                        <Box
+                            display="flex"
+                            width="100%"
+                        >
+                            <Box paddingRight={4}>
+                                <Typography>
                                 We bring together everything that’s required to
                                 build websites and apps that accept payments and
                                 send payouts globally. Stripe’s products power
                                 payments for online and in-person retailers,
                                 subscriptions businesses, software platforms and
                                 marketplaces, and everything in between.
-                                    </Typography>
-                                </Box>
-                                <Box>
-                                    <Typography>
+                                </Typography>
+                            </Box>
+                            <Box>
+                                <Typography>
                                 We also help companies beat fraud, send
                                 invoices, issue virtual and physical cards, get
                                 financing, manage business spend, and much more.
-                                    </Typography>
-                                </Box>
+                                </Typography>
                             </Box>
                         </Box>
-                    </Container>
-
-                </Box>
-            </main>
+                    </Box>
+                </Container>
+            </Box>
             <LandingFooter />
         </>
     );

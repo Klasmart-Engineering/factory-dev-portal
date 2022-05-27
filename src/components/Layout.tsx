@@ -42,10 +42,21 @@ export default function Layout (props: Props) {
     const drawer = <DrawerContent />;
 
     return (
+
         <Box sx={{
             display: `flex`,
+            width: `100%`,
         }}
         >
+            <style
+                jsx
+                global
+            >{`
+                #__next {
+                display: flex
+                }
+            `}
+            </style>
             <CssBaseline />
             <AppBar
                 position="fixed"
@@ -145,14 +156,12 @@ export default function Layout (props: Props) {
                     width: {
                         sm: `calc(100% - ${drawerWidth}px)`,
                     },
+                    backgroundColor: `#F4F6F6`,
+                    height: `100%`,
                 }}
             >
                 <Toolbar />
-                <main style={{
-                    backgroundColor: `#F4F6F6`,
-                }}
-                >{children}
-                </main>
+                {children}
             </Box>
         </Box>
     );
