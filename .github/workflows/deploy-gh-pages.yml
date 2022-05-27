@@ -25,8 +25,8 @@ jobs:
       - name: Install dependencies
         shell: bash
         run: |
+          npm ci        
           npm run lint
-          npm ci
           npm run build --if-present
           npm run export
         env:
