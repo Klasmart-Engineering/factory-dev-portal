@@ -169,7 +169,3 @@ export default function LandingFooter () {
         </Box>
     );
 }
-
-LandingFooter.getLayout = (page: ReactElement) => {
-    return <>{page}</>;
-};

@@ -1,4 +1,5 @@
 import DrawerContent from './DrawerContent';
+import UserMenu from './UserMenu';
 import MenuIcon from '@mui/icons-material/Menu';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -58,7 +59,13 @@ export default function Layout (props: Props) {
                     },
                 }}
             >
-                <Toolbar>
+                <Toolbar sx={{
+                    justifyContent: {
+                        xs: `space-between`,
+                        sm: `flex-end`,
+                    },
+                }}
+                >
                     <IconButton
                         color="inherit"
                         aria-label="open drawer"
@@ -73,13 +80,8 @@ export default function Layout (props: Props) {
                     >
                         <MenuIcon />
                     </IconButton>
-                    <Typography
-                        noWrap
-                        variant="h6"
-                        component="div"
-                    >
-                        Responsive drawer
-                    </Typography>
+
+                    <UserMenu />
                 </Toolbar>
             </AppBar>
             <Box

@@ -37,7 +37,3 @@ export default function LandingHeader () {
         </Box>
     );
 }
-
-LandingHeader.getLayout = (page: ReactElement) => {
-    return <>{page}</>;
-};
