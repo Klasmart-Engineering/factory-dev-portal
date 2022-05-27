@@ -148,7 +148,11 @@ export default function Layout (props: Props) {
                 }}
             >
                 <Toolbar />
-                <main>{children}</main>
+                <main style={{
+                    backgroundColor: `#F4F6F6`,
+                }}
+                >{children}
+                </main>
             </Box>
         </Box>
     );
