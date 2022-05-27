@@ -23,10 +23,10 @@ const darkTheme = createTheme({
     palette: {
         mode: `dark`,
         primary: {
-            main: `rgb(102, 157, 246)`,
+            main: `#669df6`,
         },
         background: {
-            paper: `rgb(5, 30, 52)`,
+            paper: `#051e34`,
         },
     },
 });
