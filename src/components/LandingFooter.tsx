@@ -7,7 +7,6 @@ import Typography from '@mui/material/Typography';
 import Image,
 { ImageLoaderProps } from 'next/image';
 import Link from 'next/link';
-import { ReactElement } from 'react';
 
 export default function LandingFooter () {
 

@@ -2,7 +2,6 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Image,
 { ImageLoaderProps } from 'next/image';
-import { ReactElement } from 'react';
 
 export default function LandingHeader () {
 

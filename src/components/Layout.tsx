@@ -11,7 +11,6 @@ import {
     ThemeProvider,
 } from '@mui/material/styles';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import { useState } from 'react';
 
 const drawerWidth = 300;
