@@ -2,11 +2,9 @@ name: Deploy to github pages
 
 on:
   workflow_dispatch: # enables on-demand/manual triggering
-  
-  # enable this for on push automatically run workflow
-  # push:
-  #   branches:
-  #   - main
+  push:
+    branches:    
+      - main
 
 jobs:
   install:
@@ -24,15 +22,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
           registry-url: https://npm.pkg.github.com/
 
-      # - name: Find node_modules cache
-      #   id: cache-node_modules
-      #   uses: actions/cache@v3
-      #   with:
-      #     path: ./node_modules
-      #     key: ${{ runner.os }}-${{ hashFiles('package-lock.json') }}
-
       - name: Install dependencies
-        # if: steps.cache-node_modules.outputs.cache-hit != 'true'
         shell: bash
         run: | 
           npm ci
@@ -41,13 +31,7 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.PACKAGES_TOKEN }}
 
-      # - name: npm ci, build, export
-      #   run: |
-      #     npm ci
-      #     npm run build --if-present
-      #     npm run export
-
-      - name: Deploy
+      - name: Deploy to github pages
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.ref == 'refs/heads/main' }}
         with:

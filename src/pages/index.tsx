@@ -1,8 +1,12 @@
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { ReactElement } from 'react';
+import LandingFooter from 'src/components/LandingFooter';
+import LandingHeader from 'src/components/LandingHeader';
 
 export default function Landing () {
 
@@ -24,19 +28,96 @@ export default function Landing () {
                 />
                 <link
                     rel="icon"
-                    href="/favicon.ico"
+                    href="/favicon.png"
                 />
             </Head>
-            <Box m={2}>
-                <p>Imagine this page as the sign in page - this page might not even exist</p>
-                <Button
-                    variant="contained"
-                    color="primary"
-                    onClick={handleClick}
-                >
-                     Click to sign in
-                </Button>
+
+            <LandingHeader />
+
+            <Box
+                paddingTop={20}
+                paddingBottom={10}
+                sx={{
+                    backgroundColor: `#051e34`,
+                }}
+            >
+                <Container>
+                    <Box display="flex">
+                        <Box width="50%">
+                            <Typography
+                                variant="h2"
+                                color="white"
+                            >
+                        Education infrastructure for the internet
+                            </Typography>
+                            <Typography color="white">From startups to large enterprises — use Kidsloop software and APIs to accept payments, send payouts, and manage their businesses online.</Typography>
+                            <Box
+                                paddingTop={3}
+                            >
+                                <Button
+                                    variant="outlined"
+                                    sx={{
+                                        color: `white`,
+                                        borderColor: `white`,
+                                        // eslint-disable-next-line @typescript-eslint/naming-convention
+                                        ":hover": {
+                                            color: `primary.light`,
+                                            borderColor: `primary.light`,
+                                        },
+                                    }}
+                                    onClick={handleClick}
+                                >
+                                    Sign in
+                                </Button>
+                            </Box>
+                        </Box>
+                    </Box>
+                </Container>
             </Box>
+            <main>
+                <Box
+                    component="section"
+                    p={8}
+                    bgcolor="white"
+                >
+                    <Container>
+                        <Box>
+                            <Box width="40%">
+                                <Typography
+                                    variant="h4"
+                                    paddingBottom={2}
+                                >
+                            A fully integrated suite of payments products
+                                </Typography>
+                            </Box>
+                            <Box
+                                display="flex"
+                                width="100%"
+                            >
+                                <Box paddingRight={4}>
+                                    <Typography>
+                                We bring together everything that’s required to
+                                build websites and apps that accept payments and
+                                send payouts globally. Stripe’s products power
+                                payments for online and in-person retailers,
+                                subscriptions businesses, software platforms and
+                                marketplaces, and everything in between.
+                                    </Typography>
+                                </Box>
+                                <Box>
+                                    <Typography>
+                                We also help companies beat fraud, send
+                                invoices, issue virtual and physical cards, get
+                                financing, manage business spend, and much more.
+                                    </Typography>
+                                </Box>
+                            </Box>
+                        </Box>
+                    </Container>
+
+                </Box>
+            </main>
+            <LandingFooter />
         </>
     );
 }
