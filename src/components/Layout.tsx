@@ -46,17 +46,9 @@ export default function Layout (props: Props) {
         <Box sx={{
             display: `flex`,
             width: `100%`,
+            height: `100%`,
         }}
         >
-            <style
-                jsx
-                global
-            >{`
-                #__next {
-                display: flex
-                }
-            `}
-            </style>
             <CssBaseline />
             <AppBar
                 position="fixed"
