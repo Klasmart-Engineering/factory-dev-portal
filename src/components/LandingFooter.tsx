@@ -1,4 +1,5 @@
 import Box from '@mui/material/Box';
+import grey from '@mui/material/colors/grey';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import List from '@mui/material/List';
@@ -53,7 +54,7 @@ export default function LandingFooter () {
                                     <Typography
                                         gutterBottom
                                         variant="body1"
-                                        color={`#646465`}
+                                        color={grey[600]}
                                     >
                                         Company
                                     </Typography>
@@ -96,7 +97,7 @@ export default function LandingFooter () {
                                     <Typography
                                         gutterBottom
                                         variant="body1"
-                                        color={`#646465`}
+                                        color={grey[600]}
                                     >
                                         Developers
                                     </Typography>
@@ -131,7 +132,7 @@ export default function LandingFooter () {
                                     <Typography
                                         gutterBottom
                                         variant="body1"
-                                        color={`#646465`}
+                                        color={grey[600]}
                                     >
                                         Others
                                     </Typography>

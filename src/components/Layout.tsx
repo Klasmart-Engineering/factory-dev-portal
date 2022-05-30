@@ -3,11 +3,14 @@ import UserMenu from './UserMenu';
 import MenuIcon from '@mui/icons-material/Menu';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
+import grey from '@mui/material/colors/grey';
+import indigo from '@mui/material/colors/indigo';
 import CssBaseline from '@mui/material/CssBaseline';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
 import {
     createTheme,
+    darken,
     ThemeProvider,
 } from '@mui/material/styles';
 import Toolbar from '@mui/material/Toolbar';
@@ -22,11 +25,8 @@ interface Props {
 const darkTheme = createTheme({
     palette: {
         mode: `dark`,
-        primary: {
-            main: `#669df6`,
-        },
         background: {
-            paper: `#051e34`,
+            paper: darken(indigo[900], 0.7),
         },
     },
 });
@@ -148,7 +148,7 @@ export default function Layout (props: Props) {
                     width: {
                         sm: `calc(100% - ${drawerWidth}px)`,
                     },
-                    backgroundColor: `#F4F6F6`,
+                    backgroundColor: grey[300],
                     height: `100%`,
                 }}
             >

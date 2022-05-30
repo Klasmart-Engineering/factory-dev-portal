@@ -1,5 +1,7 @@
 import Box from '@mui/material/Box';
+import indigo from '@mui/material/colors/indigo';
 import Container from '@mui/material/Container';
+import { darken } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import Head from 'next/head';
 import { ReactElement } from 'react';
@@ -28,7 +30,7 @@ export default function Landing () {
                 paddingTop={20}
                 paddingBottom={10}
                 sx={{
-                    backgroundColor: `#051e34`,
+                    backgroundColor: darken(indigo[900], 0.7),
                 }}
             >
                 <Container>
