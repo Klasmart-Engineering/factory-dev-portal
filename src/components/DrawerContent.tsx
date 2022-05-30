@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function DrawerContent () {
 
     const imageLoader = (resolverProps: ImageLoaderProps) => {
-        return `https://kidsloop.net/${resolverProps.src}`;
+        return `/${resolverProps.src}`;
     };
 
     return (
@@ -23,7 +23,7 @@ export default function DrawerContent () {
                     <a>
                         <Image
                             loader={imageLoader}
-                            src="wp-content/uploads/2021/08/kidsloop.svg"
+                            src="kidsloop-default.svg"
                             alt="kidsloop logo"
                             width={150}
                             height={50}

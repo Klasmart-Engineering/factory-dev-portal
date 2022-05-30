@@ -1,4 +1,5 @@
 import DrawerContent from './DrawerContent';
+import UserMenu from './UserMenu';
 import MenuIcon from '@mui/icons-material/Menu';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -10,7 +11,6 @@ import {
     ThemeProvider,
 } from '@mui/material/styles';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import { useState } from 'react';
 
 const drawerWidth = 300;
@@ -23,10 +23,10 @@ const darkTheme = createTheme({
     palette: {
         mode: `dark`,
         primary: {
-            main: `rgb(102, 157, 246)`,
+            main: `#669df6`,
         },
         background: {
-            paper: `rgb(5, 30, 52)`,
+            paper: `#051e34`,
         },
     },
 });
@@ -42,8 +42,11 @@ export default function Layout (props: Props) {
     const drawer = <DrawerContent />;
 
     return (
+
         <Box sx={{
             display: `flex`,
+            width: `100%`,
+            height: `100%`,
         }}
         >
             <CssBaseline />
@@ -58,7 +61,13 @@ export default function Layout (props: Props) {
                     },
                 }}
             >
-                <Toolbar>
+                <Toolbar sx={{
+                    justifyContent: {
+                        xs: `space-between`,
+                        sm: `flex-end`,
+                    },
+                }}
+                >
                     <IconButton
                         color="inherit"
                         aria-label="open drawer"
@@ -73,13 +82,8 @@ export default function Layout (props: Props) {
                     >
                         <MenuIcon />
                     </IconButton>
-                    <Typography
-                        noWrap
-                        variant="h6"
-                        component="div"
-                    >
-                        Responsive drawer
-                    </Typography>
+
+                    <UserMenu />
                 </Toolbar>
             </AppBar>
             <Box
@@ -144,10 +148,12 @@ export default function Layout (props: Props) {
                     width: {
                         sm: `calc(100% - ${drawerWidth}px)`,
                     },
+                    backgroundColor: `#F4F6F6`,
+                    height: `100%`,
                 }}
             >
                 <Toolbar />
-                <main>{children}</main>
+                {children}
             </Box>
         </Box>
     );

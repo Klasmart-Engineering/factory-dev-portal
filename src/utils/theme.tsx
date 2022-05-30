@@ -13,7 +13,7 @@ export function useTheme () {
     const palette: PaletteOptions = {
         mode: `light`,
         primary: {
-            main: blue[500],
+            main: blue[600],
         },
         secondary: {
             main: teal[500],
