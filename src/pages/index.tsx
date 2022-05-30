@@ -1,22 +1,12 @@
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
 import { ReactElement } from 'react';
 import LandingFooter from 'src/components/LandingFooter';
 import LandingHeader from 'src/components/LandingHeader';
 
 export default function Landing () {
-
-    const router = useRouter();
-
-    const handleClick = () => {
-        router.push(`/subscriptions`, undefined, {
-            shallow: true,
-        });
-    };
 
     return (
         <>
@@ -51,25 +41,7 @@ export default function Landing () {
                         Education infrastructure for the internet
                             </Typography>
                             <Typography color="white">From startups to large enterprises — use Kidsloop software and APIs to accept payments, send payouts, and manage their businesses online.</Typography>
-                            <Box
-                                paddingTop={3}
-                            >
-                                <Button
-                                    variant="outlined"
-                                    sx={{
-                                        color: `white`,
-                                        borderColor: `white`,
-                                        // eslint-disable-next-line @typescript-eslint/naming-convention
-                                        ":hover": {
-                                            color: `primary.light`,
-                                            borderColor: `primary.light`,
-                                        },
-                                    }}
-                                    onClick={handleClick}
-                                >
-                                    Sign in
-                                </Button>
-                            </Box>
+
                         </Box>
                     </Box>
                 </Container>

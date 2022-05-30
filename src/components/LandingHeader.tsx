@@ -1,9 +1,18 @@
 import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Image,
 { ImageLoaderProps } from 'next/image';
+import { useRouter } from 'next/router';
 
 export default function LandingHeader () {
+    const router = useRouter();
+
+    const handleClick = () => {
+        router.push(`/subscriptions`, undefined, {
+            shallow: true,
+        });
+    };
 
     const imageLoader = (resolverProps: ImageLoaderProps) => {
         return `https://kidsloop.net/${resolverProps.src}`;
@@ -31,6 +40,23 @@ export default function LandingHeader () {
                         width={200}
                         height={100}
                     />
+
+                    <Button
+                        variant="outlined"
+                        sx={{
+                            color: `white`,
+                            borderColor: `white`,
+                            // eslint-disable-next-line @typescript-eslint/naming-convention
+                            ":hover": {
+                                color: `primary.light`,
+                                borderColor: `primary.light`,
+                            },
+                        }}
+                        onClick={handleClick}
+                    >
+                                    Sign in
+                    </Button>
+
                 </Box>
             </Container>
         </Box>
