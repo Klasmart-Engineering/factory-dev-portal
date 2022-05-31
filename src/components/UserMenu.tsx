@@ -71,20 +71,17 @@ export default function UserMenu () {
                 onClose={handleCloseUserMenu}
             >
                 {userOptions.map((option, index) => (
-                    <>
-                        { index !== 0 &&
-                            <Divider />
-                        }
+                    <div key={option.name}>
+                        { index !== 0 && <Divider /> }
                         <MenuItem
-                            key={option.name}
                             onClick={handleCloseUserMenu}
                         >
-                            <ListItemIcon>
+                            <ListItemIcon key={`${option.name}-icon`}>
                                 {option.icon}
                             </ListItemIcon>
                             <Typography textAlign="center">{option.name}</Typography>
                         </MenuItem>
-                    </>
+                    </div>
                 ))}
             </Menu>
         </Box>

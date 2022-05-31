@@ -1,4 +1,5 @@
 import '../styles/globals.css';
+import { ReactQueryDevtools as SubscriptionsReactQueryDevtools } from "@kl-engineering/factory-subscriptions-api-client";
 import { ThemeProvider } from '@mui/material/styles';
 import type { NextPage } from 'next';
 import type { AppProps } from 'next/app';
@@ -6,6 +7,7 @@ import type {
     ReactElement,
     ReactNode,
 } from 'react';
+import SubscriptionsApiClientProvider from 'src/providers/SubscriptionsApiClientProvider';
 import { useTheme } from 'src/utils/theme';
 
 type NextPageWithLayout = NextPage & {
@@ -22,8 +24,11 @@ export default function MyApp ({ Component, pageProps }: AppPropsWithLayout) {
     const getLayout = Component.getLayout ?? ((page) => page);
 
     return getLayout((
-        <ThemeProvider theme={useTheme()}>
-            <Component {...pageProps} />
-        </ThemeProvider>
+        <SubscriptionsApiClientProvider>
+            <ThemeProvider theme={useTheme()}>
+                <Component {...pageProps} />
+            </ThemeProvider>
+            {process.env.NODE_ENV === `development` && <SubscriptionsReactQueryDevtools position="bottom-left" />}
+        </SubscriptionsApiClientProvider>
     ));
 }
