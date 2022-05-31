@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useGetHealth } from '@kl-engineering/factory-subscriptions-api-client/dist/api/health';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
