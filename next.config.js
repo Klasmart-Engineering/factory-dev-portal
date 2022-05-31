@@ -1,8 +1,8 @@
 const rewrites = () => {
     return [
         {
-        source: "/subscriptions/__health",
-        destination: `${process.env.SUBSCRIPTIONS_ENDPOINT}/__health`,
+            source: "/subscriptions/:path*",
+            destination: `${process.env.SUBSCRIPTIONS_ENDPOINT}/:path*`,
         },
     ];
 };
