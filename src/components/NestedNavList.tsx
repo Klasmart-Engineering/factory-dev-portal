@@ -31,7 +31,7 @@ export default function NestedNavList (props: Props) {
         routeParams,
     } = props;
 
-    const [ open, setOpen ] = useState(false);
+    const [ open, setOpen ] = useState(true);
 
     const handleClick = () => {
         setOpen(!open);
