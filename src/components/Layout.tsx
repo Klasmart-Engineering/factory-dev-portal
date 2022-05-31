@@ -3,8 +3,10 @@ import UserMenu from './UserMenu';
 import MenuIcon from '@mui/icons-material/Menu';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
-import grey from '@mui/material/colors/grey';
-import indigo from '@mui/material/colors/indigo';
+import {
+    grey,
+    indigo,
+} from '@mui/material/colors';
 import CssBaseline from '@mui/material/CssBaseline';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';

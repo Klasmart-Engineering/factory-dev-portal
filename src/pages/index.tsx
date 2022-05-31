@@ -1,5 +1,5 @@
 import Box from '@mui/material/Box';
-import indigo from '@mui/material/colors/indigo';
+import { indigo } from '@mui/material/colors';
 import Container from '@mui/material/Container';
 import { darken } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';

@@ -1,5 +1,5 @@
 import Box from '@mui/material/Box';
-import grey from '@mui/material/colors/grey';
+import { grey } from '@mui/material/colors';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import List from '@mui/material/List';
