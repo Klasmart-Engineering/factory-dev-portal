@@ -5,8 +5,8 @@ import { darken } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import Head from 'next/head';
 import { ReactElement } from 'react';
-import LandingFooter from 'src/components/LandingFooter';
-import LandingHeader from 'src/components/LandingHeader';
+import LandingFooter from 'src/components/layout/LandingFooter';
+import LandingHeader from 'src/components/layout/LandingHeader';
 
 export default function Landing () {
 

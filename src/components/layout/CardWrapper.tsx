@@ -16,7 +16,10 @@ export default function CardWrapper (props: BaseCardProps) {
     } = props;
 
     return (
-        <Card>
+        <Card sx={{
+            maxWidth: 1024,
+        }}
+        >
             <CardContent>
                 { title &&
                 <Typography

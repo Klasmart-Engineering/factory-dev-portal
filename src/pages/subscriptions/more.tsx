@@ -5,7 +5,7 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import { ReactElement } from 'react';
-import Layout from 'src/components/Layout';
+import LayoutWrapper from 'src/components/layout/LayoutWrapper';
 
 export default function MorePage () {
 
@@ -63,5 +63,5 @@ export default function MorePage () {
 }
 
 MorePage.getLayout = (page: ReactElement) => {
-    return <Layout>{page}</Layout>;
+    return <LayoutWrapper>{page}</LayoutWrapper>;
 };

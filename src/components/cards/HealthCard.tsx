@@ -1,4 +1,4 @@
-import CardWrapper from './CardWrapper';
+import CardWrapper from '../layout/CardWrapper';
 import { useGetHealth } from '@kl-engineering/factory-subscriptions-api-client/dist/api/health';
 import Skeleton from '@mui/material/Skeleton';
 import Typography from '@mui/material/Typography';

@@ -33,7 +33,7 @@ const darkTheme = createTheme({
     },
 });
 
-export default function Layout (props: Props) {
+export default function LayoutWrapper (props: Props) {
     const { children } = props;
     const [ mobileOpen, setMobileOpen ] = useState(false);
 
