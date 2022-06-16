@@ -18,6 +18,7 @@ export default function CardWrapper (props: BaseCardProps) {
     return (
         <Card sx={{
             maxWidth: 1024,
+            margin: 2,
         }}
         >
             <CardContent>

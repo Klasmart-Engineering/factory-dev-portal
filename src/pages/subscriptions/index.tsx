@@ -2,7 +2,7 @@ import Grid from '@mui/material/Grid';
 import { ReactElement } from 'react';
 import HealthCard from 'src/components/cards/HealthCard';
 import SubscriptionCard from 'src/components/cards/SubscriptionCard';
-import SubscriptionUsageReportCard from 'src/components/cards/SubscriptionUsageReportCard';
+import UsageReportsCard from 'src/components/cards/UsageReportsCard';
 import LayoutWrapper from 'src/components/layout/LayoutWrapper';
 
 export default function SubscriptionsPage () {
@@ -10,20 +10,20 @@ export default function SubscriptionsPage () {
     const cards: JSX.Element[] = [
         <HealthCard key={`health-card`} />,
         <SubscriptionCard key={`subscription-card`} />,
-        <SubscriptionUsageReportCard key={`subscription-usage-report-card`} />,
+        <UsageReportsCard key={`usage-reports-card`} />,
     ];
 
     return (
         <Grid
             container
-            spacing={2}
+            direction={`column`}
+            flexWrap={`nowrap`}
         >
             {cards.map((item)=>{
                 return (
                     <Grid
                         key={item.key}
                         item
-                        xs={12}
                     >
                         {item}
                     </Grid>

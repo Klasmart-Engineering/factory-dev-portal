@@ -19,6 +19,7 @@ import Toolbar from '@mui/material/Toolbar';
 import { useState } from 'react';
 
 const drawerWidth = 300;
+const toolbarHeight = 64;
 
 interface Props {
     children: any;
@@ -67,6 +68,9 @@ export default function LayoutWrapper (props: Props) {
                     justifyContent: {
                         xs: `space-between`,
                         sm: `flex-end`,
+                    },
+                    height: {
+                        xs: `${toolbarHeight}px`,
                     },
                 }}
                 >
@@ -145,16 +149,18 @@ export default function LayoutWrapper (props: Props) {
             <Box
                 component="main"
                 sx={{
-                    flexGrow: 1,
-                    p: 3,
+                    display: `flex`,
+                    overflow: `auto`,
+                    height: `calc(100% - ${toolbarHeight}px)`,
+                    marginTop: {
+                        xs: `${toolbarHeight}px`,
+                    },
                     width: {
                         sm: `calc(100% - ${drawerWidth}px)`,
                     },
                     backgroundColor: grey[300],
-                    height: `100%`,
                 }}
             >
-                <Toolbar />
                 {children}
             </Box>
         </Box>
