@@ -5,7 +5,10 @@ import LayoutWrapper from 'src/components/layout/LayoutWrapper';
 export default function MorePage () {
 
     return (
-        <Container>
+        <Container sx={{
+            margin: 0,
+        }}
+        >
             <p>Just another page</p>
         </Container>
     );
