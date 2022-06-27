@@ -109,13 +109,20 @@ export default function ReportContent (props: Props) {
                             </Typography>
                             }
                             {reportData?.products &&
-                            <Typography
-                                variant="body2"
-                                color="text.secondary"
-                            >
-                                <strong>products:</strong> {Object.getOwnPropertyNames(reportData.products)
-                                    .join(`,`)}
-                            </Typography>
+                            <>
+                                <Typography
+                                    variant="body2"
+                                    color="text.secondary"
+                                >
+                                    <strong>products:</strong> {Object.getOwnPropertyNames(reportData.products)}
+                                </Typography>
+                                <Typography
+                                    variant="body2"
+                                    color="text.secondary"
+                                >
+                                    <strong>requests:</strong> {Object.values(reportData.products)}
+                                </Typography>
+                            </>
                             }
                         </>
                         }
