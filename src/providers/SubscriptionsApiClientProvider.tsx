@@ -17,6 +17,9 @@ export default function SubscriptionsApiClientProvider (props: Props) {
         <KlSubscriptionsApiClientProvider
             config={{
                 baseURL: SUBSCRIPTIONS_ENDPOINT,
+                headers: {
+                    Authorization: `Bearer eyJhbGciOiAiSFMyNTYiLCJ0eXAiOiAiSldUIn0.eyJzdWIiOiAic3ViLWJsYWJsYSIsIm5hbWUiOiAiU29tZWJvZHkiLCJpYXQiOiAxMjM0NTYsInN1YnNjcmlwdGlvbl9pZCI6ICIxOTY2ZjM2OC01NTI4LTQ1OTEtOTlkMS0zYzQ3NWEwMmIxZjUiLCJhbmRyb2lkX2lkIjogIjA3ZmYwMGU0LWMxYTUtNDY4My05ZmNiLTYxM2E3MzRkOGQzZiIsICJhY2NvdW50X2lkIjogIjUyYTQxZGI0LWEyMmYtNDk2Yi04ZTM2LTk0YzY0YWM4MzA1OSJ9.aW52YWxpZCBzaWduYXR1cmU`,
+                },
             }}
             queryOptions={{
                 defaultOptions: {

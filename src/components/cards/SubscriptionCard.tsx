@@ -23,7 +23,7 @@ export default function SubscriptionCard () {
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
         refetch: refetchSubscriptionData,
     } = useGetSubscription({
-        subscriptionId: `123`,
+        subscriptionId: `1966f368-5528-4591-99d1-3c475a02b1f5`,
     });
 
     const {
@@ -33,7 +33,7 @@ export default function SubscriptionCard () {
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
         refetch: patchSubscriptionRefetch,
     } = usePatchSubscription({
-        subscriptionId: `123`,
+        subscriptionId: `1966f368-5528-4591-99d1-3c475a02b1f5`,
         state: state,
     }, {
         queryOptions: {

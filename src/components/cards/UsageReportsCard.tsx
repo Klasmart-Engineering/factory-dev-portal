@@ -18,10 +18,10 @@ export default function UsageReportsCard () {
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
         refetch: usageReportsRefetch,
     } = useGetSubscriptionUsageReports({
-        subscriptionId: `123`,
+        subscriptionId: `1966f368-5528-4591-99d1-3c475a02b1f5`,
     });
 
-    const rows = data?.reports?.length ? data.reports: [];
+    const rows: { id: string; from: number; to: number }[]= data ?? [];
 
     return (
         <CardWrapper

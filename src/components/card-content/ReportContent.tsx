@@ -23,7 +23,7 @@ export default function ReportContent (props: Props) {
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
         refetch: reportDataRefetch,
     } = useGetSubscriptionUsageReportById({
-        subscriptionId: `123`,
+        subscriptionId: `1966f368-5528-4591-99d1-3c475a02b1f5`,
         usageReportId: id,
     });
 
@@ -33,7 +33,7 @@ export default function ReportContent (props: Props) {
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
         refetch: patchReportRefetch,
     } = usePatchSubscriptionUsageReportById({
-        subscriptionId: `123`,
+        subscriptionId: `1966f368-5528-4591-99d1-3c475a02b1f5`,
         usageReportId: id,
         state: UsageReportState.PROCESSING,
     }, {
