@@ -21,7 +21,7 @@ export default function UsageReportsCard () {
         subscriptionId: `1966f368-5528-4591-99d1-3c475a02b1f5`,
     });
 
-    const rows: { id: string; from: number; to: number }[]= data ?? [];
+    const rows = data ?? [];
 
     return (
         <CardWrapper
