@@ -45,14 +45,18 @@ export default function ReportContentRow (props: Props) {
                 <TableCell align="left">{row.id}</TableCell>
                 <TableCell align="left">{row.from}</TableCell>
                 <TableCell align="left">{row.to}</TableCell>
+                <TableCell />
             </TableRow>
-            <TableRow>
+            <TableRow >
                 <TableCell
                     style={{
                         paddingBottom: 0,
                         paddingTop: 0,
                     }}
                     colSpan={6}
+                    sx={{
+                        borderBottom: `none`,
+                    }}
                 >
                     <Collapse
                         unmountOnExit

@@ -98,7 +98,7 @@ export default function SubscriptionCard () {
                             variant="body2"
                             color="text.secondary"
                         >
-                            <strong>Subscription id:</strong> {subscriptionData?.subscription_id}
+                            <strong>Subscription id:</strong> {subscriptionData?.id}
                         </Typography>
                         {subscriptionData?.state &&
                             <>
