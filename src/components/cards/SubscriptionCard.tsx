@@ -34,7 +34,7 @@ export default function SubscriptionCard () {
         refetch: patchSubscriptionRefetch,
     } = usePatchSubscription({
         subscriptionId: `1966f368-5528-4591-99d1-3c475a02b1f5`,
-        state: state,
+        state: state === SubscriptionState.DISABLED ? SubscriptionState.ACTIVE : SubscriptionState.DISABLED,
     }, {
         queryOptions: {
             enabled: false,
